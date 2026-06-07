@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PMHN Exam 1 Question Bank</title>
 <style>
-:root{--bg:#f0eee8;--bg2:#e4e0d8;--card:#fffaf5;--bl:#5b7fa6;--bll:#7a9ec0;--bld:#3a5878;--tx:#1a2530;--tx2:#3a4f60;--tx3:#6a8090;--bdr:#b8ccd8;--ok:#2d6a2d;--okb:#e8f5e8;--er:#8b1a1a;--erb:#fde8e8;--pt:#5a4500;--ptb:#fff8e0;--r:12px}
+:root{--bg:#f2ede4;--bg2:#e6ddd0;--card:#faf7f2;--bl:#6b8f71;--bll:#8aab8f;--bld:#4a6b50;--tx:#1e2419;--tx2:#3d4e3a;--tx3:#6b7d65;--bdr:#b8c9b0;--ok:#2d6a2d;--okb:#e8f5e8;--er:#8b1a1a;--erb:#fde8e8;--pt:#5a4500;--ptb:#fff8e0;--r:12px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
 .screen{display:none;min-height:100vh;padding:2rem 1rem}.screen.active{display:block}
 #home{max-width:740px;margin:0 auto}
 .hdr{text-align:center;padding:3rem 0 1.8rem}.hdr .logo{font-size:2.8rem;margin-bottom:.6rem}
 .hdr h1{font-size:2.1rem;color:var(--bld);font-weight:700;letter-spacing:-.01em}.hdr p{color:var(--tx2);margin-top:.5rem;font-size:1rem}
-.card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:1.5rem;margin-bottom:1rem;box-shadow:0 2px 10px rgba(58,88,120,.08)}
-.card h2{font-size:1.05rem;color:var(--bld);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--bdr)}
-.modrow{display:flex;align-items:center;gap:10px;margin-bottom:.7rem;flex-wrap:wrap}
+.hdr h1 span{color:var(--bl)}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:1.5rem;margin-bottom:1rem;box-shadow:0 2px 10px rgba(74,107,80,.10)}
+.card h2{font-size:1.05rem;color:var(--bld);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--bdr);letter-spacing:.01em}
+.modrow{display:flex;align-items:center;gap:10px;margin-bottom:.7rem;flex-wrap:wrap;padding:6px 8px;border-radius:8px;transition:background .15s}.modrow:hover{background:var(--bg2)}
 .modbadge{border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;white-space:nowrap;color:#fff}
-.modrow label{flex:1;font-size:.95rem;color:var(--tx2);min-width:180px}
+.modrow label{flex:1;font-size:.95rem;color:var(--tx);min-width:180px;font-weight:500}
 .modrow .avail{font-size:.78rem;color:var(--tx3)}
 .modrow input[type=number]{width:72px;padding:6px 8px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--bg);color:var(--tx);font-size:.95rem;text-align:center}
 .tot{text-align:center;font-size:.95rem;color:var(--tx2);margin:.7rem 0}.tot span{font-weight:700;color:var(--bl)}
@@ -26,7 +27,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .btn-d{background:#c0392b;color:#fff}.btn-d:hover{background:#96281b}
 .btn-full{width:100%;text-align:center;padding:13px;font-size:1rem}
 .btn-sm{padding:7px 16px;font-size:.84rem}
-.wcard{background:linear-gradient(135deg,#f0f5ff,#e0eaff);border:1.5px solid var(--bll);border-radius:var(--r);padding:1.1rem 1.4rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.wcard{background:linear-gradient(135deg,#f0f5ee,#deeade);border:1.5px solid var(--bll);border-radius:var(--r);padding:1.1rem 1.4rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .wcard .wi h3{font-size:.97rem;color:var(--bld)}.wcard .wi p{font-size:.83rem;color:var(--tx3);margin-top:2px}
 .wcnt{background:var(--er);color:#fff;border-radius:20px;padding:3px 12px;font-size:.83rem;font-weight:700}
 #exam-wrap{max-width:900px;margin:0 auto}
@@ -43,8 +44,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .qstem{font-size:1.02rem;line-height:1.65;color:var(--tx);margin-bottom:1.3rem;font-weight:500}
 .opts{list-style:none;display:flex;flex-direction:column;gap:.55rem;flex:1}
 .opt{display:flex;align-items:flex-start;gap:9px;padding:11px 14px;border:1.5px solid var(--bdr);border-radius:9px;cursor:pointer;transition:all .14s;background:var(--bg);position:relative}
-.opt:hover:not(.dis){border-color:var(--bll);background:#f0f5ff}
-.opt.sel{border-color:var(--bl);background:#f0f5ff}
+.opt:hover:not(.dis){border-color:var(--bll);background:#f0f5ee}
+.opt.sel{border-color:var(--bl);background:#f0f5ee}
 .opt.corr{border-color:var(--ok);background:var(--okb)}
 .opt.wrng{border-color:var(--er);background:var(--erb)}
 .opt.dis{cursor:default}
@@ -69,18 +70,18 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .bt-col-hdr{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;padding:4px 8px;border-radius:6px;text-align:center}
 .bt-arrow{display:flex;align-items:center;justify-content:center;padding-top:28px;font-size:1.4rem;color:var(--tx3)}
 .bt-opt{padding:9px 11px;border-radius:7px;border:1.5px solid var(--bdr);cursor:pointer;font-size:.87rem;line-height:1.45;margin-bottom:5px;transition:all .14s;background:var(--bg)}
-.bt-opt:hover:not(.dis){border-color:var(--bll);background:#f0f5ff}
-.bt-opt.sel{border-color:var(--bl);background:#f0f5ff}
+.bt-opt:hover:not(.dis){border-color:var(--bll);background:#f0f5ee}
+.bt-opt.sel{border-color:var(--bl);background:#f0f5ee}
 .bt-opt.corr{border-color:var(--ok);background:var(--okb)}
 .bt-opt.wrng{border-color:var(--er);background:var(--erb)}
 .bt-opt.dis{cursor:default}
-.bt-condition{background:#f0f5ff;border:1.5px solid var(--bdr);border-radius:9px;padding:10px 12px;margin-bottom:1rem;font-size:.9rem;color:var(--tx);font-weight:500}
+.bt-condition{background:#f0f5ee;border:1.5px solid var(--bdr);border-radius:9px;padding:10px 12px;margin-bottom:1rem;font-size:.9rem;color:var(--tx);font-weight:500}
 .bt-condition-lbl{font-size:.72rem;font-weight:700;color:var(--pt);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
 .bt-condition-select{margin-bottom:1rem}
 .bt-cond-opts{display:flex;flex-direction:column;gap:.4rem;margin-top:.4rem}
 .bt-cond-opt{padding:.6rem .9rem;border:1.5px solid var(--bdr,#ccc);border-radius:8px;cursor:pointer;font-size:.88rem;transition:all .14s}
-.bt-cond-opt:hover:not(.dis){background:#f0f5ff;border-color:var(--bl)}
-.bt-cond-opt.sel{background:#e8f0fe;border-color:var(--bl);font-weight:600}
+.bt-cond-opt:hover:not(.dis){background:#f0f5ee;border-color:var(--bl)}
+.bt-cond-opt.sel{background:#e8f0ee;border-color:var(--bl);font-weight:600}
 .bt-cond-opt.corr{background:#e8f5e8;border-color:#4caf50;cursor:default}
 .bt-cond-opt.wrng{background:#fdecea;border-color:#f44336;cursor:default}
 .bt-cond-opt.dis{cursor:default}
@@ -93,7 +94,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .c-fb .fbtit{color:var(--ok)}.w-fb .fbtit{color:var(--er)}.p-fb .fbtit{color:var(--pt)}
 .fbans{font-size:.88rem;margin-bottom:.5rem;color:var(--tx2)}
 .fbrat{font-size:.88rem;line-height:1.6;color:var(--tx);margin-bottom:.6rem}
-.fbpearl{font-size:.84rem;background:#f0f5ff;border-left:3px solid var(--bl);padding:8px 12px;border-radius:4px;color:#1a3050;line-height:1.5}
+.fbpearl{font-size:.84rem;background:#f0f5ee;border-left:3px solid var(--bl);padding:8px 12px;border-radius:4px;color:#1a3050;line-height:1.5}
 .navrow{display:flex;align-items:center;justify-content:space-between;margin-top:1.3rem;gap:.7rem}
 #results{max-width:700px;margin:0 auto;text-align:center;padding:2rem 1rem}
 .rcard{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:2.2rem;box-shadow:0 2px 12px rgba(58,88,120,.1)}
@@ -196,7 +197,7 @@ const MODS=[
   {id:4,label:"Module 4 — Assessment, Neuroscience & Psychopharmacology"}
 ];
 const PASS=73;
-const MCOLS={1:"#5b3fa6",2:"#3a7a58",3:"#3a5fa6",4:"#a65b3a"};
+const MCOLS={1:"#4a6b50",2:"#7a5c3a",3:"#3d6b62",4:"#7a4f5a"};
 var S={exam:[],idx:0,answers:{},wrongBank:{},wrongOnly:false};
 function shuf(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
 function init(){renderCfg();updateWS();}
